@@ -30,8 +30,6 @@ public class ThreadExcutorConfig {
 
     @Bean(name = "asyncServiceExcutor")
     public Executor asyncServiceExcutor(){
-
-        logger.info("start "+this.getClass().getName());
         ThreadPoolTaskExecutor executor=new ThreadPoolTaskExecutor();
         executor.setCorePoolSize(corePoolSize);
         executor.setMaxPoolSize(maxPoolSize);

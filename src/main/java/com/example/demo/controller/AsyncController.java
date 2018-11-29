@@ -15,7 +15,7 @@ public class AsyncController {
 
     @RequestMapping("/task")
     public String doAsyncTask() throws InterruptedException {
-        asyncService.executeAsync();
+        asyncService.doTestAsync();
         return "ok";
     }
 }

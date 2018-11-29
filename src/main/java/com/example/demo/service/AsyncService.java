@@ -5,4 +5,5 @@ package com.example.demo.service;
  */
 public interface AsyncService {
     void executeAsync() throws InterruptedException;
+    void doTestAsync();
 }
