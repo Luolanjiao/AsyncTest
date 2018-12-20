@@ -1,8 +1,12 @@
 package com.example.demo;
 
+import com.example.demo.service.MyComparator;
 import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MyTestApplication {
     public static void main(String[] args) {
@@ -11,9 +15,10 @@ public class MyTestApplication {
 //        recursion(numbers);
         //   int[] array = {3, 1, 2, 6, 4,1, 8, 7, 0, 9};
         //  int[] array = {3, 2, 6, 7, 8, 9};
-        int[] array = {49, 38, 65, 97, 76, 13, 27, 49};
+        Integer[] array = {49, 38, 65, 97, 76, 13, 27, 49};
         //array = selectionSort(array);
-        quickSort(array, 0, array.length - 1);
+      //  quickSort(array, 0, array.length - 1);
+        swap(array);
         for (int num : array
         ) {
             System.out.println(num);
@@ -106,6 +111,15 @@ public class MyTestApplication {
         }
         if (rightIndex + 1 < sectionEnd) {
             quickSort(array, rightIndex + 1, sectionEnd);
+        }
+    }
+
+    public static void swap(Integer[] array){
+        Comparator cmp = new MyComparator();
+        Arrays.sort(array);
+        for (int num:array
+             ) {
+            System.out.println(num);
         }
     }
 }
